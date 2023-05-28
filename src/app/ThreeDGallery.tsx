@@ -1,8 +1,14 @@
 "use client";
-import React from "react";
-import { Canvas } from "react-three-fiber";
-import * as THREE from "three";
+import React, { RefObject, useRef } from "react";
+import { Canvas, useFrame, useThree } from "react-three-fiber";
+import { BufferGeometry, Material, Mesh, NormalBufferAttributes } from "three";
 
+const CameraControl = () => {
+  const { camera } = useThree();
+  camera.lookAt(0, 0, 0);
+
+  return null;
+};
 const ThreeDGallery = () => {
   return (
     <div className="w-screen h-screen bg-violet-200">
@@ -19,8 +25,10 @@ const ThreeDGallery = () => {
         }}
         orthographic
       >
+        <CameraControl />
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
+        <Box />
       </Canvas>
     </div>
   );
