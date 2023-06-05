@@ -14,15 +14,16 @@ const ThreeDGallery = () => {
     <div className="w-screen h-screen bg-violet-200">
       <Canvas
         camera={{
-          left: -window.innerWidth / 2,
-          right: window.innerWidth / 2,
-          top: window.innerHeight / 2,
-          bottom: -window.innerHeight / 2,
+          zoom: 50,
+          position: [1, 5, 5],
+          left: -1 * aspectRatio,
+          right: 1 * aspectRatio,
+          top: 1,
+          bottom: -1,
           near: 0.1,
           far: 1000,
-          position: [10, 10, 10],
-          zoom: 3,
         }}
+        shadows
         orthographic
       >
         <CameraControl />
