@@ -1,9 +1,9 @@
-import ThreeDGallery from "./ThreeDGallery";
+import ThreeDCanvas from "./ThreeD/ThreeDCanvas";
 
 export default function Home() {
   return (
     <>
-      <ThreeDGallery />
+      <ThreeDCanvas />
     </>
   );
 }
